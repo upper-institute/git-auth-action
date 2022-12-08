@@ -1,0 +1,17 @@
+name: 'Git Auth Action'
+description: 'Action to configure host machine authentication for git repositories servers.'
+inputs:
+  hosts:
+    description: 'Hosts to recognize'
+    required: true
+    default: |
+      github.com
+  privateKeys:
+    description: 'Private keys, multi-line, in form of: $NAME_OF_PRIVATE_KEY=$PRIVATE_KEY'
+    required: true
+  repositories:
+    description: 'Multi-line list of items in form of: $REPOSITORY,$HOST,$NAME_OF_PRIVATE_KEY'
+    required: true
+runs:
+  using: 'node16'
+  main: 'dist/index.js'

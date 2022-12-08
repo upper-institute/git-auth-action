@@ -1,0 +1,29 @@
+{
+  "name": "git-auth-action",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-index": "./node_modules/.bin/ncc build index.js --license licenses.txt",
+    "build": "npm run build-index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/upper-institute/git-auth-action.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/upper-institute/git-auth-action/issues"
+  },
+  "homepage": "https://github.com/upper-institute/git-auth-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/exec": "^1.1.1"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.36.0"
+  }
+}
